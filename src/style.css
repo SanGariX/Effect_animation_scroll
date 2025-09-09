@@ -1,0 +1,89 @@
+:root {
+  background-color: rgb(20, 20, 20);
+  --index: calc(1vw + 1vh);
+  --gap: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 100px;
+  margin-bottom: 50px;
+  list-style: none;
+}
+.content_item {
+  width: 100%;
+  min-height: 10vh;
+  background-color: rgb(190, 190, 190);
+  border-radius: 40px;
+}
+.bottom_space {
+  height: 1000vh;
+  width: 100%;
+}
+.container_ring {
+  height: 2000vh;
+}
+.ring_box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring {
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 12px),
+    black calc(100% - 12px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 12px),
+    black calc(100% - 12px)
+  );
+
+  animation: fillRing 3s linear forwards;
+}
+.ring_box_relative {
+  position: relative;
+}
+.ring_box_relative_breakpoint {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 0;
+}
+.breakpoint_1 {
+  inset: 0 0 auto 0;
+  transform: translateY(-50%);
+}
+.breakpoint_2 {
+  inset: 0 0 0 auto;
+  transform: translateX(50%);
+}
+.breakpoint_3 {
+  inset: auto 0 0 0;
+  transform: translateY(50%);
+}
+.breakpoint_4 {
+  inset: 0 auto 0 0;
+  transform: translateX(-50%);
+}
