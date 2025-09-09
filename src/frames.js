@@ -1,5 +1,5 @@
 const frames = (gsap, ScrollTrigger) => {
-  window.addEventListener("load", () => {
+  window.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".slide");
     const step = 2500,
       NumberSteps = [...slides].length,

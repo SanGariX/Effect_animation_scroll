@@ -1,5 +1,5 @@
 const ring = (gsap, ScrollTrigger) => {
-  window.addEventListener("load", () => {
+  window.addEventListener("DOMContentLoaded", () => {
     const ringElement = document.querySelector(".ring");
     const breakPoints = document.querySelectorAll(
       ".ring_box_relative_breakpoint"
